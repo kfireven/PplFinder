@@ -6,12 +6,12 @@ export const usePeopleFetch = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    fetchUsers();
+    fetchUsers('');
   }, []);
 
-  async function fetchUsers() {
+  async function fetchUsers(nationalities) {
     setIsLoading(true);
-    const response = await axios.get(`https://randomuser.me/api/?results=25&page=1`);
+    const response = await axios.get(`https://randomuser.me/api/?results=25&page=1&nat=` + nationalities);
     setIsLoading(false);
     setUsers(response.data.results);
   }
