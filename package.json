@@ -1,5 +1,6 @@
 {
   "name": "ppl-finder",
+  "homepage": "https://kfireven.github.io/PplFinder/",
   "version": "1.0.7",
   "bin": "./bin/cli.js",
   "license": "MIT",
@@ -24,7 +25,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "set BUILD_PATH=./docs&& react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
